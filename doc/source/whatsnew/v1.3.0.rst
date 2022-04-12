@@ -796,6 +796,7 @@ I/O
 - Bug in :func:`read_excel` dropping empty values from single-column spreadsheets (:issue:`39808`)
 - Bug in :meth:`DataFrame.to_string` misplacing the truncation column when ``index=False`` (:issue:`40907`)
 - Bug in :func:`read_orc` always raising ``AttributeError`` (:issue:`40918`)
+- Bug in the conversion from pyarrow to pandas (e.g. for reading Parquet) with nullable dtypes and a pyarrow array whose data buffer size is not a multiple of dtype size (:issue:`40896`)
 
 Period
 ^^^^^^
